@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "525687644193",
+    "project_id": "library-app-josevbrito",
+    "storage_bucket": "library-app-josevbrito.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:525687644193:android:4a13e468ef70b9dd308360",
+        "android_client_info": {
+          "package_name": "com.example.library_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAX97JHer6JgSBHhHRArV59eq5M3E1Chbc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
