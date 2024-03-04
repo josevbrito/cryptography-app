@@ -22,36 +22,36 @@ class _CadastroPageState extends State<CadastroPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Cadastro Page'),
+        title: const Text('Cadastro Page'),
       ),
 
       body: ListView(
-        padding: EdgeInsets.all(12),
+        padding: const EdgeInsets.all(12),
         children: [
           TextFormField(
             controller: _nameController,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               label: Text('Nome Completo')
             ),
           ),
 
           TextFormField(
             controller: _emailController,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               label: Text('E-mail')
             ),
           ),
 
           TextFormField(
             controller: _passwordController,
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
               label: Text('Senha')
             ),
           ),
         
           ElevatedButton(onPressed: () {
             cadastrar();
-          }, child: Text('Cadastrar'))
+          }, child: const Text('Cadastrar'))
 
           
         ],
@@ -70,7 +70,7 @@ class _CadastroPageState extends State<CadastroPage> {
         Navigator.pushAndRemoveUntil(
           context,
           MaterialPageRoute(
-            builder: (context) => Checagem(),
+            builder: (context) => const Checagem(),
           ),
           (route) => false);
       }
@@ -79,7 +79,7 @@ class _CadastroPageState extends State<CadastroPage> {
       // Senha Fraca
       if (e.code == 'weak-password') {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
+          const SnackBar(
             content: Text('Senha Fraca'),
             backgroundColor: Colors.redAccent,
           
@@ -90,7 +90,7 @@ class _CadastroPageState extends State<CadastroPage> {
       // E-mail já usado
       if (e.code == 'email-already-in-use') {
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(
+          const SnackBar(
             content: Text('Este e-mail já foi cadastrado'),
             backgroundColor: Colors.redAccent,
           

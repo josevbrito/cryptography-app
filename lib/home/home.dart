@@ -18,17 +18,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(),
+      appBar: const CustomAppBar(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text('Home Page', textAlign: TextAlign.center),
+          const Text('Home Page', textAlign: TextAlign.center),
           TextButton(
             onPressed: () {
               sair();
             },
-            child: Text('Sair'))
+            child: const Text('Sair'))
         ],
       ),
     );
@@ -39,7 +39,7 @@ class _HomePageState extends State<HomePage> {
       (user) => Navigator.pushReplacement(
         context,
         MaterialPageRoute(
-          builder: (context) => Checagem(),))
+          builder: (context) => const Checagem(),))
     );
   }
 }
