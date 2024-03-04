@@ -18,7 +18,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'library',
       theme: ThemeData(
+        brightness: Brightness.light,
         useMaterial3: true,
+        primaryColor: const Color.fromARGB(255, 56, 18, 195),
         primarySwatch: Colors.blue,
       ),
       

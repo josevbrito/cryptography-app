@@ -79,7 +79,7 @@ class _CadastroPageState extends State<CadastroPage> {
       // Senha Fraca
       if (e.code == 'weak-password') {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
+          SnackBar(
             content: Text('Senha Fraca'),
             backgroundColor: Colors.redAccent,
           
@@ -90,7 +90,7 @@ class _CadastroPageState extends State<CadastroPage> {
       // E-mail já usado
       if (e.code == 'email-already-in-use') {
         ScaffoldMessenger.of(context).showSnackBar(
-          const SnackBar(
+          SnackBar(
             content: Text('Este e-mail já foi cadastrado'),
             backgroundColor: Colors.redAccent,
           
