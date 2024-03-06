@@ -6,7 +6,9 @@ import 'package:flutter/material.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform);
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
   runApp(const MyApp());
 }
 
@@ -23,9 +25,7 @@ class MyApp extends StatelessWidget {
         primaryColor: const Color.fromARGB(255, 56, 18, 195),
         primarySwatch: Colors.blue,
       ),
-      
       home: const Checagem(),
     );
   }
-
 }
