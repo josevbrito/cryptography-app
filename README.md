@@ -1,4 +1,4 @@
-# library_app
+# App de Biblioteca
 
-Projeto em flutter para organizar seus livros na sua pequena biblioteca pessoal.
+Projeto em flutter para organizar seus livros na sua biblioteca virtual.
 
