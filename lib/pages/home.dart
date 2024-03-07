@@ -19,7 +19,6 @@ class _HomePageState extends State<HomePage> {
   Future getDocID() async {
     await FirebaseFirestore.instance.collection('users').get().then(
       (snapshot) => snapshot.docs.forEach((document) {
-        print(document.reference);
         docIDs.add(document.reference.id);
       })
       );
@@ -35,7 +34,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Home Page'),
+        title: const Text('Home Page'),
         backgroundColor: Colors.deepPurple,
         centerTitle: true,
       ),
@@ -49,7 +48,7 @@ class _HomePageState extends State<HomePage> {
               FirebaseAuth.instance.signOut();
               },
               color: Colors.deepPurple[200],
-              child: Text('Sair'),
+              child: const Text('Sair'),
             ),
           ]
         )

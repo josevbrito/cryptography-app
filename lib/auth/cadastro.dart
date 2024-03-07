@@ -277,7 +277,7 @@ class _CadastroState extends State<Cadastro> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'Já tem cadastro? ',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -286,7 +286,7 @@ class _CadastroState extends State<Cadastro> {
             
                   GestureDetector(
                     onTap: widget.showLoginPage,
-                    child: Text(
+                    child: const Text(
                       'Faça Login!',
                       style: TextStyle(
                         color: Colors.blue,

@@ -124,12 +124,12 @@ class _LoginPageState extends State<LoginPage> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (context) {
-                            return EsqueciSenha();
+                            return const EsqueciSenha();
                           }
                           )
                         );
                       },
-                      child: Text(
+                      child: const Text(
                         'Esqueci minha senha.',
                           style: TextStyle(
                             color: Colors.blue,
@@ -176,7 +176,7 @@ class _LoginPageState extends State<LoginPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'Não tem cadastro? ',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -185,7 +185,7 @@ class _LoginPageState extends State<LoginPage> {
             
                   GestureDetector(
                     onTap: widget.showCadastro,
-                    child: Text(
+                    child: const Text(
                       'Cadastre-se agora!',
                       style: TextStyle(
                         color: Colors.blue,

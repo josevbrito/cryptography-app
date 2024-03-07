@@ -25,7 +25,7 @@ class _EsqueciSenhaState extends State<EsqueciSenha> {
       showDialog(
         context: context,
         builder: (context) {
-          return AlertDialog(
+          return const AlertDialog(
             content: Text(
               'Email de redefinição enviado.Verifique sua caixa de entrada.',
             ),
@@ -57,15 +57,15 @@ class _EsqueciSenhaState extends State<EsqueciSenha> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 25.0),
             child: Text(
               'Insira seu e-mail e nós enviaremos um link para redefinir sua senha.',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 20),
             ),
           ),
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
 
           // Email
           Padding(
@@ -88,15 +88,15 @@ class _EsqueciSenhaState extends State<EsqueciSenha> {
             ),
           ),
 
-          SizedBox(height: 10),
+          const SizedBox(height: 10),
 
           MaterialButton(
             onPressed: () => passwordReset(context),
-            child: Text(
+            color: Colors.deepPurple,
+            child: const Text(
               'Redefinir Senha',
               style: TextStyle(color: Colors.white),
             ),
-            color: Colors.deepPurple,
           )
         ],
       ),
