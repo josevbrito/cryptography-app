@@ -18,10 +18,14 @@ class _LoginPageState extends State<LoginPage> {
 
   // Login
   Future login() async {
-    await FirebaseAuth.instance.signInWithEmailAndPassword(
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
       email: _emailController.text.trim(),
       password: _passwordController.text.trim()
     );
+    } on FirebaseAuthException catch (e) {
+      print(e);
+    }
   }
 
   @override
@@ -52,7 +56,7 @@ class _LoginPageState extends State<LoginPage> {
             
               // Hello
               const Text(
-                'Biblis App!',
+                'Biblioteca Virtual',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 45,

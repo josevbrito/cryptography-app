@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:library_app/auth/auth.dart';
-import 'package:library_app/pages/home.dart';
+import 'package:library_app/layouts/navbar.dart';
 
 class Checagem extends StatefulWidget {
   const Checagem({super.key});
@@ -18,7 +18,7 @@ class _ChecagemState extends State<Checagem> {
         stream: FirebaseAuth.instance.authStateChanges(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return const HomePage();
+            return const NavBar();
           } else {
             return const Auth();
           }

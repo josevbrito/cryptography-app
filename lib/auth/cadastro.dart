@@ -92,7 +92,7 @@ class _CadastroState extends State<Cadastro> {
             
               // Hello
               const Text(
-                'Biblis App!',
+                'Biblioteca Virtual!',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 45,
