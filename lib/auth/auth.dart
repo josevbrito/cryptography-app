@@ -26,7 +26,7 @@ class _AuthState extends State<Auth> {
       return LoginPage(showCadastro: toggleScreens);
 
     } else {
-      return Cadastro(showLoginPage: toggleScreens,);
+      return Cadastro(showLoginPage: toggleScreens);
     }
   }
 }
