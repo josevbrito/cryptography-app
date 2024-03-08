@@ -39,7 +39,7 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.white,
 
       body: SafeArea(
         child: Center(
@@ -47,12 +47,6 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              const Icon(
-                Icons.android,
-                size: 100
-              ),
-            
-              const SizedBox(height: 70),
             
               // Hello
               const Text(
@@ -63,11 +57,11 @@ class _LoginPageState extends State<LoginPage> {
                   color: Colors.deepPurple
                 ),
               ),
-              const SizedBox(height: 10,),
+              const SizedBox(height: 7,),
               const Text(
                 'Seja bem vindo de volta, sentimos sua falta!',
                 style: TextStyle(
-                  fontSize: 18,
+                  fontSize: 15,
                 ),
               ),
               const SizedBox(height: 50),
@@ -79,7 +73,7 @@ class _LoginPageState extends State<LoginPage> {
                   controller: _emailController,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(12)
                     ),
                     focusedBorder: OutlineInputBorder(
@@ -87,7 +81,7 @@ class _LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(12)
                     ),
                     hintText: 'Email',
-                    fillColor: Colors.grey[200],
+                    fillColor: Colors.white,
                     filled: true,
                   ),
                 ),
@@ -103,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                   controller: _passwordController,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(12)
                     ),
                     focusedBorder: OutlineInputBorder(
@@ -111,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                       borderRadius: BorderRadius.circular(12)
                     ),
                     hintText: 'Senha',
-                    fillColor: Colors.grey[200],
+                    fillColor: Colors.white,
                     filled: true,
                   ),
                 ),

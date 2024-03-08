@@ -75,7 +75,7 @@ class _CadastroState extends State<Cadastro> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.white,
 
       body: SafeArea(
         child: Center(
@@ -115,7 +115,7 @@ class _CadastroState extends State<Cadastro> {
                   controller: _firstNameController,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(12)
                     ),
                     focusedBorder: OutlineInputBorder(
@@ -123,7 +123,7 @@ class _CadastroState extends State<Cadastro> {
                       borderRadius: BorderRadius.circular(12)
                     ),
                     hintText: 'Nome',
-                    fillColor: Colors.grey[200],
+                    fillColor: Colors.white,
                     filled: true,
                   ),
                 ),
@@ -138,7 +138,7 @@ class _CadastroState extends State<Cadastro> {
                   controller: _lastNameController,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(12)
                     ),
                     focusedBorder: OutlineInputBorder(
@@ -146,7 +146,7 @@ class _CadastroState extends State<Cadastro> {
                       borderRadius: BorderRadius.circular(12)
                     ),
                     hintText: 'Sobrenome',
-                    fillColor: Colors.grey[200],
+                    fillColor: Colors.white,
                     filled: true,
                   ),
                 ),
@@ -161,7 +161,7 @@ class _CadastroState extends State<Cadastro> {
                   controller: _ageController,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(12)
                     ),
                     focusedBorder: OutlineInputBorder(
@@ -169,7 +169,7 @@ class _CadastroState extends State<Cadastro> {
                       borderRadius: BorderRadius.circular(12)
                     ),
                     hintText: 'Idade',
-                    fillColor: Colors.grey[200],
+                    fillColor: Colors.white,
                     filled: true,
                   ),
                 ),
@@ -184,7 +184,7 @@ class _CadastroState extends State<Cadastro> {
                   controller: _emailController,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(12)
                     ),
                     focusedBorder: OutlineInputBorder(
@@ -192,7 +192,7 @@ class _CadastroState extends State<Cadastro> {
                       borderRadius: BorderRadius.circular(12)
                     ),
                     hintText: 'Email',
-                    fillColor: Colors.grey[200],
+                    fillColor: Colors.white,
                     filled: true,
                   ),
                 ),
@@ -208,7 +208,7 @@ class _CadastroState extends State<Cadastro> {
                   controller: _passwordController,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(12)
                     ),
                     focusedBorder: OutlineInputBorder(
@@ -216,7 +216,7 @@ class _CadastroState extends State<Cadastro> {
                       borderRadius: BorderRadius.circular(12)
                     ),
                     hintText: 'Senha',
-                    fillColor: Colors.grey[200],
+                    fillColor: Colors.white,
                     filled: true,
                   ),
                 ),
@@ -231,7 +231,7 @@ class _CadastroState extends State<Cadastro> {
                   controller: _confirmPasswordController,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.white),
+                      borderSide: const BorderSide(color: Colors.grey),
                       borderRadius: BorderRadius.circular(12)
                     ),
                     focusedBorder: OutlineInputBorder(
@@ -239,7 +239,7 @@ class _CadastroState extends State<Cadastro> {
                       borderRadius: BorderRadius.circular(12)
                     ),
                     hintText: 'Confirme a Senha',
-                    fillColor: Colors.grey[200],
+                    fillColor: Colors.white,
                     filled: true,
                   ),
                 ),

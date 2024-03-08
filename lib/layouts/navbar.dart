@@ -37,7 +37,7 @@ class _NavBarState extends State<NavBar> {
             backgroundColor: Colors.deepPurple,
             color: Colors.white,
             activeColor: Colors.white,
-            tabBackgroundColor: const Color.fromARGB(255, 149, 117, 205),
+            tabBackgroundColor: Colors.deepPurple.shade300,
             gap: 8,
             onTabChange: (index) {
               setState(() {
