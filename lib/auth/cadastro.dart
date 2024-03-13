@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:cryptocode_app/layouts/appbar.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -72,36 +73,15 @@ class _CadastroState extends State<Cadastro> {
     return Scaffold(
       backgroundColor: Colors.white,
 
-      body: SingleChildScrollView(
-          child: Center(
+      appBar: const CustomAppBar(title: 'Cadastro',),
+
+      body: Center(
+        
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
+              
               children: [
-              const Icon(
-                Icons.android,
-                size: 100
-              ),
-            
-              const SizedBox(height: 70),
-            
-              // Hello
-              const Text(
-                'Biblioteca Virtual!',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 45,
-                  color: Colors.deepPurple
-                ),
-              ),
-              const SizedBox(height: 10,),
-              const Text(
-                'Cadastre-se, agora!',
-                style: TextStyle(
-                  fontSize: 18,
-                ),
-              ),
-              const SizedBox(height: 50),
-
+        
               // First Name
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -270,7 +250,7 @@ class _CadastroState extends State<Cadastro> {
             ],
             ),
           ),
-        ),
-      );
+        );
+  
   }
 }

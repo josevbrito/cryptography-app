@@ -12,8 +12,8 @@ class _DescriptoPageState extends State<DescriptoPage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(title: 'Amigos'),
-      body: Center(child: Text('Amigos')),
+      appBar: CustomAppBar(title: 'Descriptografar'),
+      body: Center(child: Text('Descriptografar')),
     );
   }
 }

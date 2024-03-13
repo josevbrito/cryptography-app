@@ -35,7 +35,7 @@ class _NavBarState extends State<NavBar> {
             backgroundColor: Colors.deepPurple,
             color: Colors.white,
             activeColor: Colors.white,
-            tabBackgroundColor: Colors.deepPurple.shade300,
+            tabBackgroundColor: Colors.deepPurple.shade400,
             gap: 8,
             onTabChange: (index) {
               setState(() {
@@ -44,9 +44,9 @@ class _NavBarState extends State<NavBar> {
             },
             padding: const EdgeInsets.all(16),
             tabs: const [
-              GButton(icon: Icons.lock, text: 'Cripto'),
-              GButton(icon: Icons.lock_open, text: 'Descripto'),
-              GButton(icon: Icons.person, text: 'Perfil'),
+              GButton(icon: Icons.lock, text: 'Criptografar'),
+              GButton(icon: Icons.lock_open, text: 'Descriptografar'),
+              GButton(icon: Icons.settings, text: 'Configurações'),
             ],
           ),
         ),

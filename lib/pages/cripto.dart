@@ -15,10 +15,10 @@ class _CriptoPageState extends State<CriptoPage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(title: 'Home Page'),
+      appBar: CustomAppBar(title: 'Criptografar'),
       body: Center(
         child: Text(
-          'Home Page'
+          'Criptografar'
         ),
       ),
     );

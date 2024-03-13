@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Cryptocode',
       theme: ThemeData(
-        brightness: Brightness.light,
+        // brightness: Brightness.dark,
         useMaterial3: true,
         primaryColor: const Color.fromARGB(255, 56, 18, 195),
         primarySwatch: Colors.blue,
