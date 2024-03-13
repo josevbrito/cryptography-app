@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:cryptocode_app/layouts/appbar.dart';
 
-class FriendsPage extends StatefulWidget {
-  const FriendsPage({super.key});
+class DescriptoPage extends StatefulWidget {
+  const DescriptoPage({super.key});
 
   @override
-  State<FriendsPage> createState() => _FriendsPageState();
+  State<DescriptoPage> createState() => _DescriptoPageState();
 }
 
-class _FriendsPageState extends State<FriendsPage> {
+class _DescriptoPageState extends State<DescriptoPage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(

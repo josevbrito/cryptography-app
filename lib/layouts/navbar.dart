@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:cryptocode_app/pages/books.dart';
-import 'package:cryptocode_app/pages/friends.dart';
-import 'package:cryptocode_app/pages/home.dart';
+import 'package:cryptocode_app/pages/descripto.dart';
+import 'package:cryptocode_app/pages/cripto.dart';
 import 'package:cryptocode_app/pages/profile.dart';
 
 class NavBar extends StatefulWidget {
@@ -16,9 +15,8 @@ class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    const HomePage(),
-    const BooksPage(),
-    const FriendsPage(),
+    const CriptoPage(),
+    const DescriptoPage(),
     const SettingsPage(),
   ];
 
@@ -46,9 +44,8 @@ class _NavBarState extends State<NavBar> {
             },
             padding: const EdgeInsets.all(16),
             tabs: const [
-              GButton(icon: Icons.home, text: 'Home'),
-              GButton(icon: Icons.menu_book, text: 'Livros'),
-              GButton(icon: Icons.group, text: 'Amigos'),
+              GButton(icon: Icons.lock, text: 'Cripto'),
+              GButton(icon: Icons.lock_open, text: 'Descripto'),
               GButton(icon: Icons.person, text: 'Perfil'),
             ],
           ),

@@ -3,14 +3,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:cryptocode_app/layouts/appbar.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class CriptoPage extends StatefulWidget {
+  const CriptoPage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<CriptoPage> createState() => _CriptoPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _CriptoPageState extends State<CriptoPage> {
   final user = FirebaseAuth.instance.currentUser!;
 
   // Document IDs

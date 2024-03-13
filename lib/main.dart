@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'library',
+      title: 'Cryptocode',
       theme: ThemeData(
         brightness: Brightness.light,
         useMaterial3: true,
