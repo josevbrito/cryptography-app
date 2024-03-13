@@ -1,4 +1,4 @@
-# App de Biblioteca
+# Crypto Code
 
-Projeto em flutter para organizar seus livros na sua biblioteca virtual.
+Projeto em flutter para servir de criptografia e descriptografia.
 

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:library_app/auth/cadastro.dart';
-import 'package:library_app/auth/login.dart';
+import 'package:cryptocode_app/auth/cadastro.dart';
+import 'package:cryptocode_app/auth/login.dart';
 
 class Auth extends StatefulWidget {
   const Auth({super.key});

@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:library_app/auth/esqueci_senha.dart';
+import 'package:cryptocode_app/auth/esqueci_senha.dart';
 
 class LoginPage extends StatefulWidget {
   final VoidCallback showCadastro;

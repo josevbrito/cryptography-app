@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:library_app/pages/books.dart';
-import 'package:library_app/pages/friends.dart';
-import 'package:library_app/pages/home.dart';
-import 'package:library_app/pages/profile.dart';
+import 'package:cryptocode_app/pages/books.dart';
+import 'package:cryptocode_app/pages/friends.dart';
+import 'package:cryptocode_app/pages/home.dart';
+import 'package:cryptocode_app/pages/profile.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({Key? key}) : super(key: key);

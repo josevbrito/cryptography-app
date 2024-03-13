@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:library_app/layouts/appbar.dart';
+import 'package:cryptocode_app/layouts/appbar.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});

@@ -1,4 +1,4 @@
-package com.example.library_app
+package com.example.cryptocode_app
 
 import io.flutter.embedding.android.FlutterActivity
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:library_app/layouts/appbar.dart';
+import 'package:cryptocode_app/layouts/appbar.dart';
 
 class FriendsPage extends StatefulWidget {
   const FriendsPage({super.key});

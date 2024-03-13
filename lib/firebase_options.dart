@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -49,20 +46,30 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyAsTGV_AgYtIkM7KTOUttZclgcvCH1oRQQ',
+    appId: '1:421162570630:web:8376a4ff191609cb681207',
+    messagingSenderId: '421162570630',
+    projectId: 'cryptocode-app-josevbrito',
+    authDomain: 'cryptocode-app-josevbrito.firebaseapp.com',
+    storageBucket: 'cryptocode-app-josevbrito.appspot.com',
+    measurementId: 'G-6J5BNPZWC3',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyAX97JHer6JgSBHhHRArV59eq5M3E1Chbc',
-    appId: '1:525687644193:android:4a13e468ef70b9dd308360',
-    messagingSenderId: '525687644193',
-    projectId: 'library-app-josevbrito',
-    storageBucket: 'library-app-josevbrito.appspot.com',
+    apiKey: 'AIzaSyAz9PQcw4qPdlHydOBzvMsQyehUFy57pZk',
+    appId: '1:421162570630:android:111981a4797bd022681207',
+    messagingSenderId: '421162570630',
+    projectId: 'cryptocode-app-josevbrito',
+    storageBucket: 'cryptocode-app-josevbrito.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyC4c93_vDWqI03bg_iDtmDJ8fcWVHlF6FQ',
-    appId: '1:525687644193:ios:39361db43322198e308360',
-    messagingSenderId: '525687644193',
-    projectId: 'library-app-josevbrito',
-    storageBucket: 'library-app-josevbrito.appspot.com',
-    iosBundleId: 'com.example.libraryApp',
+    apiKey: 'AIzaSyCXu7R222a3H1JBk0xg6j11vYcSQc5T1cg',
+    appId: '1:421162570630:ios:77971b1bb49d18e8681207',
+    messagingSenderId: '421162570630',
+    projectId: 'cryptocode-app-josevbrito',
+    storageBucket: 'cryptocode-app-josevbrito.appspot.com',
+    iosBundleId: 'com.example.cryptocodeApp',
   );
 }
