@@ -19,7 +19,6 @@ class _CadastroState extends State<Cadastro> {
   final _confirmPasswordController = TextEditingController();
   final _firstNameController = TextEditingController();
   final _lastNameController = TextEditingController();
-  final _ageController = TextEditingController();
 
   @override
   void dispose(){
@@ -28,7 +27,6 @@ class _CadastroState extends State<Cadastro> {
     _confirmPasswordController.dispose();
     _firstNameController.dispose();
     _lastNameController.dispose();
-    _ageController.dispose();
     super.dispose();
   }
 
@@ -45,7 +43,6 @@ class _CadastroState extends State<Cadastro> {
       _firstNameController.text.trim(),
       _lastNameController.text.trim(),
       _emailController.text.trim(),
-      int.parse(_ageController.text.trim()),
       
     );
 
@@ -53,13 +50,11 @@ class _CadastroState extends State<Cadastro> {
     }
   }
 
-  Future addUserDetails(String firstName, String lastName, String email, int age) async {
+  Future addUserDetails(String firstName, String lastName, String email) async {
     await FirebaseFirestore.instance.collection('users').add({
       'first name': firstName,
       'last name': lastName,
       'email': email,
-      'age': age,
-
     });
   }
 
@@ -77,9 +72,8 @@ class _CadastroState extends State<Cadastro> {
     return Scaffold(
       backgroundColor: Colors.white,
 
-      body: SafeArea(
-        child: Center(
-          child: SingleChildScrollView(
+      body: SingleChildScrollView(
+          child: Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -146,29 +140,6 @@ class _CadastroState extends State<Cadastro> {
                       borderRadius: BorderRadius.circular(12)
                     ),
                     hintText: 'Sobrenome',
-                    fillColor: Colors.white,
-                    filled: true,
-                  ),
-                ),
-              ),
-            
-              const SizedBox(height: 10,),
-
-              // Age
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
-                child: TextField(
-                  controller: _ageController,
-                  decoration: InputDecoration(
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.grey),
-                      borderRadius: BorderRadius.circular(12)
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.deepPurple),
-                      borderRadius: BorderRadius.circular(12)
-                    ),
-                    hintText: 'Idade',
                     fillColor: Colors.white,
                     filled: true,
                   ),
@@ -300,7 +271,6 @@ class _CadastroState extends State<Cadastro> {
             ),
           ),
         ),
-      ),
-    );
+      );
   }
 }
