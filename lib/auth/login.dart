@@ -28,6 +28,9 @@ class _LoginPageState extends State<LoginPage> {
     }
   }
 
+  // Visualizar a senha
+  bool _isObscure = true;
+
   @override
   void dispose(){
     _emailController.dispose();
@@ -93,7 +96,7 @@ class _LoginPageState extends State<LoginPage> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: TextField(
-                  obscureText: true,
+                  obscureText: _isObscure,
                   controller: _passwordController,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
@@ -107,6 +110,14 @@ class _LoginPageState extends State<LoginPage> {
                     hintText: 'Senha',
                     fillColor: Colors.white,
                     filled: true,
+                    suffixIcon: IconButton(
+                      icon: Icon(_isObscure ? Icons.visibility_off : Icons.visibility),
+                      onPressed: () {
+                        setState(() {
+                          _isObscure = !_isObscure;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),

@@ -68,6 +68,10 @@ class _CadastroState extends State<Cadastro> {
   }
 
 
+  // Visualizar a senha
+  bool _isObscure = true;
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -155,7 +159,7 @@ class _CadastroState extends State<Cadastro> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: TextField(
-                  obscureText: true,
+                  obscureText: _isObscure,
                   controller: _passwordController,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
@@ -169,6 +173,14 @@ class _CadastroState extends State<Cadastro> {
                     hintText: 'Senha',
                     fillColor: Colors.white,
                     filled: true,
+                    suffixIcon: IconButton(
+                      icon: Icon(_isObscure ? Icons.visibility_off : Icons.visibility),
+                      onPressed: () {
+                        setState(() {
+                          _isObscure = !_isObscure;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
@@ -178,7 +190,7 @@ class _CadastroState extends State<Cadastro> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
                 child: TextField(
-                  obscureText: true,
+                  obscureText: _isObscure,
                   controller: _confirmPasswordController,
                   decoration: InputDecoration(
                     enabledBorder: OutlineInputBorder(
@@ -192,6 +204,14 @@ class _CadastroState extends State<Cadastro> {
                     hintText: 'Confirme a Senha',
                     fillColor: Colors.white,
                     filled: true,
+                    suffixIcon: IconButton(
+                      icon: Icon(_isObscure ? Icons.visibility_off : Icons.visibility),
+                      onPressed: () {
+                        setState(() {
+                          _isObscure = !_isObscure;
+                        });
+                      },
+                    ),
                   ),
                 ),
               ),
