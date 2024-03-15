@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:cryptocode_app/pages/descripto.dart';
-import 'package:cryptocode_app/pages/cripto.dart';
-import 'package:cryptocode_app/pages/profile.dart';
+import 'package:cryptocode/pages/cripto.dart';
+import 'package:cryptocode/pages/descripto.dart';
+import 'package:cryptocode/pages/profile.dart';
 
 class NavBar extends StatefulWidget {
-  const NavBar({Key? key}) : super(key: key);
+  const NavBar({super.key});
 
   @override
   State<NavBar> createState() => _NavBarState();
@@ -28,14 +28,14 @@ class _NavBarState extends State<NavBar> {
         children: _pages,
       ),
       bottomNavigationBar: Container(
-        color: Colors.deepPurple,
+        color: Colors.amber.shade700,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 13.0),
           child: GNav(
-            backgroundColor: Colors.deepPurple,
-            color: Colors.white,
-            activeColor: Colors.white,
-            tabBackgroundColor: Colors.deepPurple.shade400,
+            backgroundColor: Colors.amber.shade700,
+            color: Colors.black,
+            activeColor: Colors.black,
+            tabBackgroundColor: Colors.amber.shade500,
             gap: 8,
             onTabChange: (index) {
               setState(() {

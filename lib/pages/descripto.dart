@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:cryptocode_app/layouts/appbar.dart';
+import 'package:cryptocode/layouts/appbar.dart';
 
 class DescriptoPage extends StatefulWidget {
   const DescriptoPage({super.key});

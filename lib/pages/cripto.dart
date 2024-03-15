@@ -1,6 +1,5 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:cryptocode_app/layouts/appbar.dart';
+import 'package:cryptocode/layouts/appbar.dart';
 
 class CriptoPage extends StatefulWidget {
   const CriptoPage({super.key});
@@ -10,7 +9,6 @@ class CriptoPage extends StatefulWidget {
 }
 
 class _CriptoPageState extends State<CriptoPage> {
-  final user = FirebaseAuth.instance.currentUser!;
 
   @override
   Widget build(BuildContext context) {

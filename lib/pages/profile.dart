@@ -1,6 +1,5 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:cryptocode_app/layouts/appbar.dart';
+import 'package:cryptocode/layouts/appbar.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({super.key});
@@ -15,18 +14,7 @@ class _SettingsPageState extends State<SettingsPage> {
     return Scaffold(
       appBar: const CustomAppBar(title: 'Perfil'),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            MaterialButton(
-              onPressed: () {
-              FirebaseAuth.instance.signOut();
-              },
-              color: Colors.deepPurple[200],
-              child: const Text('Sair'),
-            ),
-          ]
-        )
+        child: Text('Settings', style: TextStyle(color: Colors.amber[400]),)
       ),
     );
   }
