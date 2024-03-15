@@ -1,4 +1,6 @@
+import 'package:cryptocode/layouts/functions/button.dart';
 import 'package:cryptocode/layouts/navbar.dart';
+import 'package:cryptocode/layouts/functions/text.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatefulWidget {
@@ -26,62 +28,24 @@ class _WelcomeState extends State<Welcome> {
             const SizedBox(height: 10,),
 
             // Small message
-            Padding(
-              padding: const EdgeInsets.all(15),
+            const Padding(
+              padding: EdgeInsets.all(15),
               child: Column(
                 children: [
-                  Text('I am happy to see you here!', style: TextStyle(color: Colors.amber[600]),),
-                  Text('I hope you enjoy using the app', style: TextStyle(color: Colors.amber[600]),)
+                  TextModel(content: 'I am happy to see you here!', sizeText: 14, peso: 'normal'),
+                  TextModel(content: 'I hope you enjoy using the app', sizeText: 14, peso: 'normal'),
                 ],
               ),
             ),
 
             // Application button
-            Padding(
-              padding: const EdgeInsets.all(15),
+            const Padding(
+              padding: EdgeInsets.all(15),
               child: Column(
                 children: [
-                  ElevatedButton(
-                    // Route
-                    onPressed: () {
-                      Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) {
-                        return const NavBar();
-                      }
-                      )
-                    );
-                    },
-
-                    // Button Style
-                    style: ElevatedButton.styleFrom(
-                      
-                    ),
-
-                    // Text
-                    child: Text(
-                      'Enter',
-                      style: TextStyle(color: Colors.amber[600]),
-                    ),
-                  ),
-
-                  const SizedBox(height: 10,),
-
-                  ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) {
-                        return const NavBar();
-                      }
-                      )
-                    );
-                    },
-                    child: Text(
-                      'About me',
-                      style: TextStyle(color: Colors.amber[600]),
-                    ),
-                  ),
+                  ButtonModel(direction: NavBar(), content: 'Enter'),
+                  SizedBox(height: 10,),
+                  ButtonModel(direction: NavBar(), content: 'About Me')
                 ],
               ),
             ),

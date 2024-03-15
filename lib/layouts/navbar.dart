@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:cryptocode/pages/cripto.dart';
-import 'package:cryptocode/pages/descripto.dart';
-import 'package:cryptocode/pages/profile.dart';
+import 'package:cryptocode/pages/ecryption.dart';
+import 'package:cryptocode/pages/decryption.dart';
+import 'package:cryptocode/pages/settings.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
@@ -15,8 +15,8 @@ class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    const CriptoPage(),
-    const DescriptoPage(),
+    const EcryptionPage(),
+    const DecryptionPage(),
     const SettingsPage(),
   ];
 
@@ -44,9 +44,9 @@ class _NavBarState extends State<NavBar> {
             },
             padding: const EdgeInsets.all(16),
             tabs: const [
-              GButton(icon: Icons.lock, text: 'Criptografar'),
-              GButton(icon: Icons.lock_open, text: 'Descriptografar'),
-              GButton(icon: Icons.settings, text: 'Configurações'),
+              GButton(icon: Icons.lock, text: 'Ecryption'),
+              GButton(icon: Icons.lock_open, text: 'Decryption'),
+              GButton(icon: Icons.settings, text: 'Settings'),
             ],
           ),
         ),
