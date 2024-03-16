@@ -1,3 +1,4 @@
+import 'package:cryptocode/layouts/functions/text.dart';
 import 'package:flutter/material.dart';
 import 'package:cryptocode/layouts/appbar.dart';
 
@@ -11,10 +12,10 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const CustomAppBar(title: 'Settings'),
+    return const Scaffold(
+      appBar: CustomAppBar(title: 'Settings'),
       body: Center(
-        child: Text('Settings', style: TextStyle(color: Colors.amber[400]),)
+        child: TextModel(content: 'Settings', sizeText: 14, peso: 'normal'),
       ),
     );
   }

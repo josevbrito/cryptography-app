@@ -21,15 +21,13 @@ class _WelcomeState extends State<Welcome> {
           children: [
             // Welcome text
             Padding(
-              padding: const EdgeInsets.all(15),
+              padding: const EdgeInsets.all(0),
               child: Text('Welcome', style: TextStyle(color: Colors.amber[600], fontWeight: FontWeight.bold, fontSize: 40),),
             ),
 
-            const SizedBox(height: 10,),
-
             // Small message
             const Padding(
-              padding: EdgeInsets.all(15),
+              padding: EdgeInsets.only(top: 5,  bottom: 50),
               child: Column(
                 children: [
                   TextModel(content: 'I am happy to see you here!', sizeText: 14, peso: 'normal'),

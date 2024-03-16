@@ -1,3 +1,4 @@
+import 'package:cryptocode/layouts/functions/text.dart';
 import 'package:flutter/material.dart';
 import 'package:cryptocode/layouts/appbar.dart';
 
@@ -15,9 +16,7 @@ class _EcryptionPageState extends State<EcryptionPage> {
     return const Scaffold(
       appBar: CustomAppBar(title: 'Ecryption'),
       body: Center(
-        child: Text(
-          'Ecryption'
-        ),
+        child: TextModel(content: 'Ecryption', sizeText: 14, peso: 'normal')
       ),
     );
   }
