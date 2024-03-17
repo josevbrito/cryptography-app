@@ -15,19 +15,19 @@ class _WelcomeState extends State<Welcome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
-      body: Center(
+      backgroundColor: Theme.of(context).colorScheme.background,
+      body: const Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Welcome text
             Padding(
-              padding: const EdgeInsets.all(0),
-              child: Text('Welcome', style: TextStyle(color: Colors.amber[600], fontWeight: FontWeight.bold, fontSize: 40),),
+              padding: EdgeInsets.all(0),
+              child: TextModel(content: 'Welcome', sizeText: 40, peso: 'bold')
             ),
 
             // Small message
-            const Padding(
+            Padding(
               padding: EdgeInsets.only(top: 5,  bottom: 50),
               child: Column(
                 children: [
@@ -38,7 +38,7 @@ class _WelcomeState extends State<Welcome> {
             ),
 
             // Application button
-            const Padding(
+            Padding(
               padding: EdgeInsets.all(15),
               child: Column(
                 children: [

@@ -1,4 +1,6 @@
 import 'package:cryptocode/pages/welcome.dart';
+import 'package:cryptocode/theme/dark_mode.dart';
+import 'package:cryptocode/theme/light_mode.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,11 +15,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Cryptocode',
-      theme: ThemeData(
-        brightness: Brightness.dark,
-        fontFamily: 'Quicksand',
-        useMaterial3: true,
-      ),
+      theme: lightTheme,
+      darkTheme: darkTheme,
       home: const Welcome(),
     );
   }

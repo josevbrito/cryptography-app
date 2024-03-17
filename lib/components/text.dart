@@ -21,7 +21,7 @@ class TextModel extends StatelessWidget {
 
     return Text(
       content,
-      style: TextStyle(color: Colors.amber.shade600, fontSize: sizeText, fontWeight: fontWeight),
+      style: TextStyle(fontSize: sizeText, fontWeight: fontWeight),
     );
   }
 }

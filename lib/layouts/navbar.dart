@@ -28,14 +28,12 @@ class _NavBarState extends State<NavBar> {
         children: _pages,
       ),
       bottomNavigationBar: Container(
-        color: Colors.amber.shade700,
+        color: Theme.of(context).colorScheme.primary,
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 13.0),
           child: GNav(
-            backgroundColor: Colors.amber.shade700,
-            color: Colors.black,
-            activeColor: Colors.black,
-            tabBackgroundColor: Colors.amber.shade500,
+            backgroundColor: Theme.of(context).colorScheme.primary,
+            tabBackgroundColor: Theme.of(context).colorScheme.secondary,
             gap: 8,
             onTabChange: (index) {
               setState(() {

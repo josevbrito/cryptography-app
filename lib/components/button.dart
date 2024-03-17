@@ -21,13 +21,13 @@ class ButtonModel extends StatelessWidget {
 
       // Button Style
       style: ElevatedButton.styleFrom(
-
+        backgroundColor: Theme.of(context).colorScheme.primary,
       ),
 
       // Text
       child: Text(
         content,
-        style: TextStyle(color: Colors.amber[600]),
+        style: TextStyle(color: Theme.of(context).textTheme.labelLarge!.color),
       ),
     );
   }
