@@ -1,4 +1,4 @@
-import 'package:cryptocode/layouts/functions/text.dart';
+import 'package:cryptocode/components/text.dart';
 import 'package:flutter/material.dart';
 import 'package:cryptocode/layouts/appbar.dart';
 
