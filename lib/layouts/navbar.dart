@@ -15,7 +15,7 @@ class _NavBarState extends State<NavBar> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    const EcryptionPage(),
+    const EncryptionPage(),
     const DecryptionPage(),
     const SettingsPage(),
   ];

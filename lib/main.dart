@@ -1,14 +1,11 @@
 import 'package:cryptocode/pages/welcome.dart';
-import 'package:cryptocode/theme/theme_provider.dart';
+import 'package:cryptocode/theme/theme.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+
 
 void main() {
   runApp(
-    ChangeNotifierProvider(
-      create: (context) => ThemeProvider(),
-      child: const MyApp(),
-    )
+      const MyApp(),
   );
 }
 
@@ -19,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Cryptocode',
-      theme: Provider.of<ThemeData>(context),
+      theme: darkMode,
       home: const Welcome(),
     );
   }

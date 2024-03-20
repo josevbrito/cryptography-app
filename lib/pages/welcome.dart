@@ -21,10 +21,7 @@ class _WelcomeState extends State<Welcome> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             // Welcome text
-            Padding(
-              padding: EdgeInsets.all(0),
-              child: TextModel(content: 'Welcome', sizeText: 40, peso: 'bold')
-            ),
+            TextModel(content: 'Welcome', sizeText: 40, peso: 'bold'),
 
             // Small message
             Padding(
