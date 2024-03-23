@@ -3,7 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:cryptocode/layouts/appbar.dart';
 
 class DecryptionPage extends StatefulWidget {
-  const DecryptionPage({Key? key}) : super(key: key);
+  const DecryptionPage({super.key});
 
   @override
   State<DecryptionPage> createState() => _DecryptionPageState();
