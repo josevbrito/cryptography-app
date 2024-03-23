@@ -1,4 +1,3 @@
-import 'package:cryptocode/components/text.dart';
 import 'package:flutter/material.dart';
 import 'package:cryptocode/layouts/appbar.dart';
 
@@ -14,9 +13,22 @@ class AboutMePageState extends State<AboutMePage> {
   Widget build(BuildContext context) {
     return const Scaffold(
       appBar: CustomAppBar(title: 'About Me'),
-      body: Center(
-        child: TextModel(content: 'About Me', sizeText: 14, peso: 'normal'),
-      ),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: EdgeInsets.all(20),
+          child: Column(
+            children: [
+              // Photo
+
+              // My name
+
+              // Description
+
+              // Contats
+            ],
+          ),
+        ),
+      )
     );
   }
 }
