@@ -42,15 +42,25 @@ ThemeData darkMode = ThemeData(
   ),
 
   // Text
-    textTheme: const TextTheme(
+  textTheme: const TextTheme(
     labelLarge: TextStyle(color: Colors.white),
   ),
 
-  
+  // Button Theme
+  elevatedButtonTheme: ElevatedButtonThemeData(
+    style: ButtonStyle(
+      foregroundColor: MaterialStateProperty.resolveWith<Color>(
+        (Set<MaterialState> states) {
+          return Colors.white;
+        },
+      ),
+    ),
+  ),
+
   // Themes
   colorScheme: ColorScheme.dark(
     background: Colors.black,
     primary: Colors.grey[900]!,
-    secondary: Colors.grey[800]!
+    secondary: Colors.grey[800]!,
   ),
 );
