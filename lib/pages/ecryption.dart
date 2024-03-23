@@ -18,66 +18,68 @@ class _EncryptionPageState extends State<EncryptionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: const CustomAppBar(title: 'Encryption'),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-
-            // Text Box
-            TextField(
-              controller: _textController,
-              decoration: const InputDecoration(
-                labelText: 'Enter your message',
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+        
+              // Text Box
+              TextField(
+                controller: _textController,
+                decoration: const InputDecoration(
+                  labelText: 'Enter your message',
+                ),
               ),
-            ),
-            const SizedBox(height: 20),
-
-            // Dropdown Codes
-            DropdownButton<String>(
-              value: _selectedOption,
-              onChanged: (String? newValue) {
-                setState(() {
-                  _selectedOption = newValue!;
-                });
-              },
-              items: <String>[
-                'Binary',
-                'Octal',
-                'Hexadecimal',
-                'Morse Code',
-              ].map<DropdownMenuItem<String>>((String value) {
-                return DropdownMenuItem<String>(
-                  value: value,
-                  child: Text(value),
-                );
-              }).toList(),
-            ),
-            const SizedBox(height: 20),
-
-            // Convert Button
-            ElevatedButton(
-              onPressed: _convertText,
-              child: const Text('Convert'),
-            ),
-            const SizedBox(height: 20),
-
-            // Converted Box
-            const Text('Converted Text:',
-                style: TextStyle(fontWeight: FontWeight.bold)),
-            const SizedBox(height: 10),
-            SelectableText(
-              _convertedText,
-              style: const TextStyle(fontSize: 16),
-            ),
-            const SizedBox(height: 20),
-
-            // Copy
-            ElevatedButton(
-              onPressed: _copyToClipboard,
-              child: const Text('Copy Converted Text'),
-            ),
-          ],
+              const SizedBox(height: 20),
+        
+              // Dropdown Codes
+              DropdownButton<String>(
+                value: _selectedOption,
+                onChanged: (String? newValue) {
+                  setState(() {
+                    _selectedOption = newValue!;
+                  });
+                },
+                items: <String>[
+                  'Binary',
+                  'Octal',
+                  'Hexadecimal',
+                  'Morse Code',
+                ].map<DropdownMenuItem<String>>((String value) {
+                  return DropdownMenuItem<String>(
+                    value: value,
+                    child: Text(value),
+                  );
+                }).toList(),
+              ),
+              const SizedBox(height: 20),
+        
+              // Convert Button
+              ElevatedButton(
+                onPressed: _convertText,
+                child: const Text('Convert'),
+              ),
+              const SizedBox(height: 20),
+        
+              // Converted Box
+              const Text('Converted Text:',
+                  style: TextStyle(fontWeight: FontWeight.bold)),
+              const SizedBox(height: 10),
+              SelectableText(
+                _convertedText,
+                style: const TextStyle(fontSize: 16),
+              ),
+              const SizedBox(height: 20),
+        
+              // Copy
+              ElevatedButton(
+                onPressed: _copyToClipboard,
+                child: const Text('Copy Converted Text'),
+              ),
+            ],
+          ),
         ),
       ),
     );
