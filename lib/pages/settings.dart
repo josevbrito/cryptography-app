@@ -1,4 +1,3 @@
-import 'package:cryptocode/theme/theme.dart';
 import 'package:flutter/material.dart';
 import 'package:cryptocode/layouts/appbar.dart';
 
@@ -16,12 +15,8 @@ class _SettingsPageState extends State<SettingsPage> {
       appBar: const CustomAppBar(title: 'Settings'),
       body: Center(
           child: Padding(
-            padding: const EdgeInsets.only(top: 50, bottom: 50, left: 25, right: 25),
-            child: Container(
-              decoration: BoxDecoration(
-                color: theme.primaryColor
-              ),
-              child: ListView(
+            padding: const EdgeInsets.only(top: 25),
+            child: ListView(
                 children: [
 
                   // Theme
@@ -68,7 +63,7 @@ class _SettingsPageState extends State<SettingsPage> {
               ),
             ),
           ),
-        )
+  
       );
   }
 }
