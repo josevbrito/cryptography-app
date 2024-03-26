@@ -1,79 +1,69 @@
-import 'package:flutter/material.dart';
 import 'package:cryptocode/layouts/appbar.dart';
+import 'package:flutter/material.dart';
 
-class SettingsPage extends StatefulWidget {
-  const SettingsPage({super.key});
+class DecryptionPage extends StatefulWidget {
+  const DecryptionPage({super.key});
 
   @override
-  State<SettingsPage> createState() => _SettingsPageState();
+  State<DecryptionPage> createState() => _DecryptionPageState();
 }
 
-class _SettingsPageState extends State<SettingsPage> {
+class _DecryptionPageState extends State<DecryptionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'Settings'),
+      appBar: const CustomAppBar(title: 'Encryption'),
       body: Center(
           child: Padding(
             padding: const EdgeInsets.only(top: 25),
             child: ListView(
                 children: [
-
-                  // Theme
-                  ListTile(
-                    leading: const Icon(Icons.color_lens),
-                    title: const Text('Theme'),
-                    trailing: const Icon(Icons.keyboard_arrow_right),
-                    onTap: () {
-                      // route
-                    },
-                  ),
-                  
-                  // Language
-                  ListTile(
-                    leading: const Icon(Icons.translate),
-                    title: const Text('Language'),
-                    trailing: const Icon(Icons.keyboard_arrow_right),
-                    onTap: () {
-                      // route
-                    },
-                  ),
-
-                  // Charts
-                  ListTile(
-                    leading: const Icon(Icons.add_chart_outlined),
-                    title: const Text('Charts'),
-                    trailing: const Icon(Icons.keyboard_arrow_right),
-                    onTap: () {
-                      // route
-                    },
-                  ),
-
-                  // Other works
+                  // Binary
                   ListTile(
                     leading: const Icon(Icons.code),
-                    title: const Text('Other codes'),
+                    title: const Text('Binary'),
                     trailing: const Icon(Icons.keyboard_arrow_right),
                     onTap: () {
                       // route
                     },
                   ),
 
-                  // About Me
+                  // Octal
                   ListTile(
-                    leading: const Icon(Icons.person),
-                    title: const Text('About Me'),
+                    leading: const Icon(Icons.code),
+                    title: const Text('Octal'),
                     trailing: const Icon(Icons.keyboard_arrow_right),
                     onTap: () {
                       // route
                     },
                   ),
+
+                  // Hexadecimal
+                  ListTile(
+                    leading: const Icon(Icons.code),
+                    title: const Text('Hexadecimal'),
+                    trailing: const Icon(Icons.keyboard_arrow_right),
+                    onTap: () {
+                      // route
+                    },
+                  ),
+
+                  // Morse code
+                  ListTile(
+                    leading: const Icon(Icons.keyboard),
+                    title: const Text('Morse Code'),
+                    trailing: const Icon(Icons.keyboard_arrow_right),
+                    onTap: () {
+                      // route
+                    },
+                  ),
+
 
                 ],
               ),
             ),
           ),
   
-      );
+    );
   }
 }
