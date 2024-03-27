@@ -1,6 +1,6 @@
 import 'package:cryptocode/components/button.dart';
 import 'package:cryptocode/layouts/navbar.dart';
-import 'package:cryptocode/components/text.dart';
+import 'package:cryptocode/components/textmodel.dart';
 import 'package:cryptocode/pages/about_me.dart';
 import 'package:flutter/material.dart';
 

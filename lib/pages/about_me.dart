@@ -12,7 +12,7 @@ class AboutMePageState extends State<AboutMePage> {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: CustomAppBar(title: 'About Me'),
+      appBar: AppBarPages(title: 'About Me'),
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.all(20),
