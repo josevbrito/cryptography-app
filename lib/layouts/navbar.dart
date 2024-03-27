@@ -1,3 +1,4 @@
+import 'package:cryptocode/pages/about_me.dart';
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:cryptocode/pages/ecryption.dart';
@@ -17,6 +18,7 @@ class _NavBarState extends State<NavBar> {
   final List<Widget> _pages = [
     const EncryptionPage(),
     const DecryptionPage(),
+    const AboutMePage()
   ];
 
   @override
@@ -43,6 +45,7 @@ class _NavBarState extends State<NavBar> {
             tabs: const [
               GButton(icon: Icons.lock, text: 'Ecryption'),
               GButton(icon: Icons.lock_open, text: 'Decryption'),
+              GButton(icon: Icons.person, text:  'About Me')
             ],
           ),
         ),

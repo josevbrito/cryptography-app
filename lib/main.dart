@@ -1,4 +1,4 @@
-import 'package:cryptocode/pages/welcome.dart';
+import 'package:cryptocode/layouts/navbar.dart';
 import 'package:cryptocode/theme/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Cryptocode',
       theme: theme,
-      home: const Welcome(),
+      home: const NavBar(),
     );
   }
 }
