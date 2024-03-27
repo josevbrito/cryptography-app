@@ -1,6 +1,6 @@
+import 'package:cryptocode/layouts/appbar_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:cryptocode/layouts/appbar.dart';
 
 class DecryptionPage extends StatefulWidget {
   const DecryptionPage({super.key});
@@ -10,80 +10,181 @@ class DecryptionPage extends StatefulWidget {
 }
 
 class _DecryptionPageState extends State<DecryptionPage> {
-  final TextEditingController _textController = TextEditingController();
+  final _textController = TextEditingController();
   String _selectedOption = 'Binary';
   String _convertedText = '';
 
   @override
+  void dispose() {
+    _textController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(title: 'Decryption'),
+      // AppBar
+      appBar: const AppBarPages(title: 'Decryption'),
+
+      // Page
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              // Text Box
-              TextField(
-                controller: _textController,
-                decoration: const InputDecoration(
-                  labelText: 'Enter your message',
-                ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+
+            // Part 1
+            Container(
+              height: 500,
+              decoration: BoxDecoration(
+                  color: Theme.of(context).primaryColor, 
+                  borderRadius: const BorderRadius.only(
+                      bottomLeft: Radius.circular(25),
+                      bottomRight: Radius.circular(25))),
+              child: Column(
+                children: [
+                  const SizedBox(height: 15,),
+                  // Typed text
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                      child: Stack(
+                        children: [
+                          TextField(
+                            controller: _textController,
+                            maxLines: null,
+                            onChanged: (value) {
+                              setState(() {
+                                _convertedText = _convert(value);
+                              });
+                            },
+                            decoration: InputDecoration(
+                              hintText: 'Enter your message',
+                              border: OutlineInputBorder(
+                                borderSide: BorderSide.none,
+                                borderRadius: BorderRadius.circular(25),
+                              ),
+                              filled: true,
+                              fillColor: Colors.transparent,
+                              contentPadding: const EdgeInsets.symmetric(horizontal: 0),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+
+                  // Divider
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                    child: Divider(thickness: 0.5, color: Colors.grey[800])
+                  ),
+
+                  // Converted Text
+                  Expanded(
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 15),
+                      child: SingleChildScrollView(
+                        child: Text(
+                          _convertedText,
+                          style: const TextStyle(fontSize: 16),
+                        ),
+                      ),
+                    ),
+                  ),
+
+                ]
               ),
-              const SizedBox(height: 20),
-              // Dropdown Codes
-              DropdownButton<String>(
-                value: _selectedOption,
-                onChanged: (String? newValue) {
-                  setState(() {
-                    _selectedOption = newValue!;
-                  });
-                },
-                items: <String>[
-                  'Binary',
-                  'Octal',
-                  'Hexadecimal',
-                  'Morse Code',
-                ].map<DropdownMenuItem<String>>((String value) {
-                  return DropdownMenuItem<String>(
-                    value: value,
-                    child: Text(value),
-                  );
-                }).toList(),
+            ),
+
+            const SizedBox(height: 30,),
+
+            // Part 2
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                  
+                      // Button Clear
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: const CircleBorder(),
+                          backgroundColor: Colors.grey[900], 
+                          padding: const EdgeInsets.all(20),
+                        ),
+                        onPressed: () {
+                          setState(() {
+                            _textController.clear();
+                            _convertedText = '';
+                          });
+                        },
+                        child: const Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.clear, color: Colors.white), 
+                            SizedBox(height: 5),
+                            Text(
+                              'Clear',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(width: 50,),
+                  
+                      // Button Copy
+                      ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                          shape: const CircleBorder(),
+                          backgroundColor: Colors.grey[900],
+                          padding: const EdgeInsets.all(20), 
+                        ),
+                        onPressed: () => _copyToClipboard(_convertedText),
+                        child: const Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(Icons.copy, color: Colors.white),
+                            SizedBox(height: 5),
+                            Text(
+                              'Copy',
+                              style: TextStyle(color: Colors.white),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  // Dropdown Codes
+                  DropdownButton<String>(
+                    value: _selectedOption,
+                    onChanged: (String? newValue) {
+                      setState(() {
+                        _selectedOption = newValue!;
+                      });
+                    },
+                    items: <String>[
+                      'Binary',
+                      'Octal',
+                      'Hexadecimal',
+                      'Morse Code',
+                    ].map<DropdownMenuItem<String>>((String value) {
+                      return DropdownMenuItem<String>(
+                        value: value,
+                        child: Text(value),
+                      );
+                    }).toList(),
+                  ),
+                  const SizedBox(height: 20),
+                ],
               ),
-              const SizedBox(height: 20),
-              // Convert Button
-              ElevatedButton(
-                onPressed: _convertText,
-                child: const Text('Convert'),
-              ),
-              const SizedBox(height: 20),
-              // Converted Box
-              const Text('Converted Text:',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
-              const SizedBox(height: 10),
-              SelectableText(
-                _convertedText,
-                style: const TextStyle(fontSize: 16),
-              ),
-              const SizedBox(height: 20),
-              // Copy
-              ElevatedButton(
-                onPressed: _copyToClipboard,
-                child: const Text('Copy Converted Text'),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
-  }
-
-  void _convertText() {
-    setState(() {
-      _convertedText = _convert(_textController.text);
-    });
   }
 
   // Code choice
@@ -159,7 +260,7 @@ class _DecryptionPageState extends State<DecryptionPage> {
   }
 
   // Copy
-  void _copyToClipboard() {
+  void _copyToClipboard(String convertedText) {
     Clipboard.setData(ClipboardData(text: _convertedText));
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
