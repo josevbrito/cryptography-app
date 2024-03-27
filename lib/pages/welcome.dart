@@ -2,8 +2,6 @@ import 'package:cryptocode/components/button.dart';
 import 'package:cryptocode/layouts/navbar.dart';
 import 'package:cryptocode/components/text.dart';
 import 'package:cryptocode/pages/about_me.dart';
-import 'package:cryptocode/pages/encryption/encryption.dart';
-import 'package:cryptocode/pages/home_page.dart';
 import 'package:flutter/material.dart';
 
 class Welcome extends StatefulWidget {
@@ -44,10 +42,6 @@ class _WelcomeState extends State<Welcome> {
                   ButtonModel(direction: NavBar(), content: 'Enter'),
                   SizedBox(height: 10,),
                   ButtonModel(direction: AboutMePage(), content: 'About Me'),
-                  SizedBox(height: 10,),
-                  ButtonModel(direction: HomePage(), content: 'Entres'),
-                  SizedBox(height: 10,),
-                  ButtonModel(direction: EncryptionPage(), content: 'Entres')
                 ],
               ),
             ),
